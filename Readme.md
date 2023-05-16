@@ -12,7 +12,7 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 - Linear Search
 - Binary Search
 
-## 2. Shorting Algo-
+## 3. Shorting Algo-
 
 - Bubble sort
 - Insertion sort
@@ -20,7 +20,7 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 - Marge sort
 - Quick sort
 
-## 2. LinkList
+## 4. LinkList
 
 ### - Operation
 
@@ -34,7 +34,7 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 - Dubbly linklist
 - Circular linklist
 
-## 2. Stack-
+## 5. Stack-
 
 - Stack implementation using Array
 - Stack implementation using Array not use Structure
@@ -42,13 +42,13 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 - Application - Infix to Postfix
 - Application - Parenthesis matching
 
-## 2. Queue-
+## 6. Queue-
 
 - Queue implementation using Array
 - Queue implementation using Linklist
 - Circular Queue implementation using Array
 
-## 2. Tree-
+## 7. Tree-
 
 - Checking Binary Search Tree
 - Search in BTS

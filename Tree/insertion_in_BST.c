@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Create Node's Data Structure
 struct bst
 {
     int data;
@@ -8,6 +9,7 @@ struct bst
     struct bst *left;
 };
 
+// New Node Creating Function
 struct bst *childCreate(int val)
 {
     struct bst *ptr = (struct bst *)malloc(sizeof(struct bst)); // Creat A Child and Allocate meamory in heap
@@ -16,6 +18,7 @@ struct bst *childCreate(int val)
     ptr->right = NULL;
 }
 
+// InOrder Traversal Function
 void inorderTraversal(struct bst *root)
 {
     if (root != NULL)
@@ -26,6 +29,7 @@ void inorderTraversal(struct bst *root)
     }
 }
 
+// Function for Insertion in Tree
 void insertionInTrees(struct bst *root, int val)
 {
     // create a pointer that help for pount the needed root;;;;
@@ -33,11 +37,11 @@ void insertionInTrees(struct bst *root, int val)
     // searching the where the element will be palced.....
     while (root != NULL)
     {
-        previous = root ;
+        previous = root;
         if (val == root->data)
         {
             printf("\nTree Already have %d element, So According by BST-properties Insertion can't POSSIIBLE!", val);
-            return ;
+            return;
         }
         else if (val > root->data)
         {
@@ -58,7 +62,6 @@ void insertionInTrees(struct bst *root, int val)
     {
         previous->left = newchild;
     }
-
 }
 
 int main()
@@ -81,7 +84,7 @@ int main()
     inorderTraversal(root);
     insertionInTrees(root, 40);
     printf("\n");
-    printf("After Insertion: --->\n");    
+    printf("After Insertion: --->\n");
     inorderTraversal(root);
 
     return 0;

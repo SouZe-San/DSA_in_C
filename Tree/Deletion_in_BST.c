@@ -16,13 +16,14 @@ struct bst *childCreate(int val)
     ptr->right = NULL;
 }
 
-struct bst *inPreSuccesor(struct bst* root){
-    root = root ->left;  // At first root ka left  node ko root banaya then If there Left Sub tree Present then it take most right element.....
+struct bst *inPreSuccesor(struct bst *root)
+{
+    root = root->left; // At first root ka left  node ko root banaya then If there Left Sub tree Present then it take most right element.....
     while (root->right != NULL)
     {
-        root ->right = root ->right;
+        root->right = root->right;
     }
-    return root;   
+    return root;
 }
 void inorderTraversal(struct bst *root)
 {
@@ -36,34 +37,34 @@ void inorderTraversal(struct bst *root)
 
 struct bst *deletationInBST(struct bst *root, int value)
 {
-    struct bst* inPre;
+    struct bst *inPre;
     if (root == NULL)
     {
         printf("\nThe tree is Blank Now!..\n Ther No Element like this for delete...");
         return NULL;
     }
     if (root->left == NULL && root->right == NULL && root->data == value)
-    {  // If Have one Node in BST only delete happens
+    { // If Have one Node in BST only delete happens
         free(root);
         return NULL;
     }
-    //  Prosess  for goes in deep If tree is long....
-   if (value> root->data)
-   {
-        root-> right = deletationInBST(root->right,value);
-   }
-   else if (value<root->data)
-   {
-    root-> left = deletationInBST(root->left,value);
-   }
-   else
-   {
-    inPre = inPreSuccesor(root);  //---> this root not the lead rooot
-    root->data = inPre->data;
-     // As we take PreSeucessor then that mean it's Value will be less than the rooot's value .
-     root->left = deletationInBST(inPre, inPre->data);
-   }
-   
+    //  Proses goes in deep If tree is long....
+    if (value > root->data)
+    {
+        root->right = deletationInBST(root->right, value);
+    }
+    else if (value < root->data)
+    {
+        root->left = deletationInBST(root->left, value);
+    }
+    else
+    {
+        inPre = inPreSuccesor(root); //---> this root not the lead rooot
+        root->data = inPre->data;
+        // As we take PreSuccessor then that mean it's Value will be less than the root's value .
+        root->left = deletationInBST(inPre, inPre->data);
+    }
+
     return root;
 }
 int main()
@@ -84,7 +85,7 @@ int main()
     child2->right = child2_2;
     printf("Before Insertion:-> ");
     inorderTraversal(root);
-    deletationInBST(root,3);
+    deletationInBST(root, 3);
     printf("\n");
     printf("After Insertion:-> ");
     inorderTraversal(root);

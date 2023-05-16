@@ -6,6 +6,8 @@ struct trees
     struct trees *left;
     struct trees *right;
 };
+
+// Creating For New Node/child
 struct trees *child(int value)
 {
     struct trees *ptr = (struct trees *)malloc(sizeof(struct trees)); // Creat A Child and Allocate meamory in heap
@@ -14,18 +16,18 @@ struct trees *child(int value)
     ptr->right = NULL;
 }
 
-void inOrederTraverdsal(struct trees *root){
-    if (root!=NULL)
+void inOrederTraverdsal(struct trees *root)
+{
+    if (root != NULL)
     {
         inOrederTraverdsal(root->left);
-        printf("%d ",root->data);
+        printf("%d ", root->data);
         inOrederTraverdsal(root->right);
     }
-    
 }
 int isThisBST(struct trees *root)
 {
-    static struct trees *prev = NULL;  // this will idecate the leave(child-node) node the root... root ka next hoga prev
+    static struct trees *prev = NULL; // this will idecate the leave(child-node) node the root... root ka next hoga prev
     // static : for this after many time recusive its valu will not rest....by NULL
     if (root != NULL)
     {
@@ -34,19 +36,17 @@ int isThisBST(struct trees *root)
             // if left subtrees is not an binary tree then whole tree will not be a binary tree... so return 0;
             return 0;
         }
-        else if (prev!= NULL && root->data <= prev->data)
+        else if (prev != NULL && root->data <= prev->data)
         {
             return 0;
         }
         prev = root;
         return isThisBST(root->right);
-        
     }
     else
     {
         return 1; // if root is null then stil it itself an binary tree
     }
-    
 }
 int main()
 {
@@ -63,20 +63,20 @@ int main()
     child1->left = child1_1;
     child1->right = child1_2;
     child2->right = child2_2;
-/*
-    Properties of BTS:
-        1. value of left node of root should be less than root AND right valu should be grrreater 
-*/
+    /*
+        Properties of BTS:
+            1. value of left node of root should be less than root AND right valu should be grrreater
+    */
     inOrederTraverdsal(root);
 
     if (isThisBST(root))
     {
         printf("\n this is a BST");
     }
-    else{
+    else
+    {
         printf("\n Not A BST");
     }
-    
-    
+
     return 0;
 }
