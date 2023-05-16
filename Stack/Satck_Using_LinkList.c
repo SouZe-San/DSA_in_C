@@ -11,7 +11,7 @@ struct Linklist //---------------> At first insilise the linklist
 
 struct Linklist *top = NULL; /*------>declare the top pointer globally., Declaring it globally gives its access to all our functions without passing them as a parameter.. Generally This is for Pop Operation So its dosent become comeplex..............*/
 
-/* Two return type Function for find stack full or empty---------*/
+/*  Two return type Function for find stack full or empty---------*/
 int Isempty(struct Linklist *node)
 {
     if (node == NULL)
@@ -107,7 +107,7 @@ int pop(struct Linklist *lastNode)
 int peekInStack(int index)
 {
     struct Linklist *ptr = top; //------->create a pointer for track the node(index from top) as command --- And point that pointer to the head of that stack
-    for (int i = 0; i < index-1 && ptr != NULL; i++)
+    for (int i = 0; i < index - 1 && ptr != NULL; i++)
     {
         ptr = ptr->next;
     }
@@ -120,7 +120,6 @@ int peekInStack(int index)
         return -1;
     }
 }
-
 
 int main()
 {
