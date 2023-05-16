@@ -47,3 +47,13 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 - Queue implementation using Array
 - Queue implementation using Linklist
 - Circular Queue implementation using Array
+
+## 2. Tree-
+
+- Checking Binary Search Tree
+- Search in BTS
+- Travels in BTS
+- Insertion in BTS
+- Deletion in BTS
+- AVL Tree
+- AVL Tree Rotation
