@@ -1,11 +1,11 @@
 # Data Structure and Algorithms Using C
 
-this is Basic of DSA in C, here have all code of some basics, like- Array, Linklist, Graph, Tree etc
+this is the Basic of DSA in C, here have all code of some basics, like- Array, Linklist, Graph, Tree, etc
 
 ## 1. Array --
 
-- Insertion any position
-- Deletion any position
+- Insertion of any position
+- Deletion of any position
 
 ## 2. Searching Algo-
 
@@ -22,7 +22,7 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 
 ## 4. LinkList
 
-    A linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence
+    A linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes that together represent a sequence
 
 - Single linklist
   - Insertion
@@ -33,7 +33,7 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 
 ## 5. Stack-
 
-        Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out)
+        A stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out)
 
 - Stack implementation using Array
 - Stack implementation using Array not use Structure
@@ -52,7 +52,7 @@ this is Basic of DSA in C, here have all code of some basics, like- Array, Linkl
 ## 7. Tree-
 
         A tree data structure is a hierarchical structure that is used to represent and organize data in a way that is easy to navigate and search.
-        Here we basically study of Binary tree , which have most 2 node and lest 0
+        Here we basically study of Binary tree, which has the most 2 nodes and the least 0
 
 - Checking Binary Search Tree
 - Search in BTS
